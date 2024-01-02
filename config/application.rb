@@ -23,5 +23,6 @@ module Quotes
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.always_require_authentication = ENV.fetch("ALWAYS_REQUIRE_AUTHENTICATION") { false }
   end
 end

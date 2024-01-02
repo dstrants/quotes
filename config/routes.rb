@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
+
+  devise_for :users
   resources :quotes
   resources :authors
   get '/search', to: 'quotes#search'
