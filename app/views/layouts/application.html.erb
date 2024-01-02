@@ -10,7 +10,14 @@
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <%= javascript_importmap_tags %>
   </head>
-
+  <header>
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_url %></li>
+        <li><%= link_to 'Authors', authors_url %></li>
+      </ul>
+    </nav>
+  </header>
   <body>
     <%= yield %>
   </body>
