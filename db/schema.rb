@@ -12,10 +12,11 @@
 
 ActiveRecord::Schema[7.1].define(version: 2024_01_02_090916) do
   create_table "authors", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_authors_on_name", unique: true
+    t.index ["first_name", "last_name"], name: "index_authors_on_first_name_and_last_name", unique: true
   end
 
   create_table "quotes", force: :cascade do |t|
