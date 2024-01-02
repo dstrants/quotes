@@ -19,6 +19,11 @@ class QuotesController < ApplicationController
   def edit
   end
 
+  def search
+    @quotes = Quote.where("body LIKE ?", "%#{params[:q]}%")
+    render :index
+  end
+
   # POST /quotes or /quotes.json
   def create
     @quote = Quote.new(quote_params)
